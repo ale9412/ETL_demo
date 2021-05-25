@@ -7,7 +7,7 @@ from datetime import timezone,datetime
 
 def persistData(dataframe, batchId):
 
-      # Write to Cassandra
+      # Write to InfluxDB
       data = dataframe.rdd.collect()
       print("Writing data to InfluxDB")
       for i in data:
